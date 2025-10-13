@@ -2,6 +2,7 @@ from nicegui import ui
 import requests
 import io
 import re
+import os
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem
 from reportlab.lib.styles import getSampleStyleSheet
@@ -188,5 +189,10 @@ def main_page():
 
 
 if __name__ in {"__main__", "__mp_main__"}:
-    ui.run(title="Business Intelligence Pro", port=3000, reload=False)
+    ui.run(
+        title="Business Intelligence Pro",
+        host="0.0.0.0",  # required so Render can access it
+        port=int(os.environ.get("PORT", 3000)),  # use Render's assigned port
+        reload=False
+    )
 
