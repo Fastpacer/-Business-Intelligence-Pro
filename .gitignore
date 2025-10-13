@@ -1,0 +1,86 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# -------------------------
+# Virtual Environments
+# -------------------------
+.venv/
+venv/
+ENV/
+env/
+*.envrc
+
+# -------------------------
+# Environment & Secrets
+# -------------------------
+.env
+.env.*
+!.env.example
+
+# -------------------------
+# IDE / Editor
+# -------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# -------------------------
+# OS Files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Logs & Reports
+# -------------------------
+*.log
+logs/
+*.out
+*.err
+
+# -------------------------
+# Cache
+# -------------------------
+.cache/
+.pytest_cache/
+.mypy_cache/
+__snapshots__/
+
+# -------------------------
+# NiceGUI / Frontend
+# -------------------------
+node_modules/
+*.lock
+package-lock.json
+yarn.lock
+
+# -------------------------
+# Testing / Coverage
+# -------------------------
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+
+# -------------------------
+# Misc
+# -------------------------
+*.sqlite3
+*.db
+*.pdf
+*.csv
+*.tmp

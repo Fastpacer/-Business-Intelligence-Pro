@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+beautifulsoup4
+requests
+pandas
+aiohttp
+httpx
+fake-useragent
+openai
+groq
+python-dotenv
+pydantic
+jupyter
+streamlit
+tqdm
