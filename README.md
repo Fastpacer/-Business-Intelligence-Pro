@@ -23,41 +23,6 @@ Growth Signals & Risks
 
 🔗 Multi‑API Orchestration: DuckDuckGo, NewsData, Brandfetch, Groq LLM, with Serper used only for strategic context.
 
-🏗️ Project Structure
-Code
-src/
-└── backend/
-    ├── app.py                  # FastAPI entrypoint
-    ├── main_nicegui.py         # NiceGUI frontend entrypoint
-    ├── .env                    # Environment variables (ignored in git)
-    ├── .gitignore              # Git ignore rules
-    ├── README.md               # Project documentation
-    ├── requirements.txt        # Python dependencies
-    │
-    ├── data/
-    │   └── processed/          # Processed datasets (if any)
-    │
-    ├── models/
-    │   ├── __init__.py
-    │   ├── lead_model.py       # Pydantic models for leads
-    │   ├── response_model.py   # Response schemas
-    │   └── __pycache__/        # Python cache (ignored)
-    │
-    ├── routers/
-    │   ├── __init__.py
-    │   ├── ai_insights.py      # AI insights endpoint
-    │   ├── enrich.py           # Company enrichment endpoint
-    │   ├── scrape.py           # Legacy scraping endpoint
-    │   └── __pycache__/        # Python cache (ignored)
-    │
-    └── utils/
-        ├── __init__.py
-        ├── api_helpers.py      # API integrations + LLM prompt logic
-        ├── data_cleaner.py     # Cleaning & preprocessing
-        ├── exporter.py         # CSV/PDF export helpers
-        ├── parser_utils.py     # Parsing utilities
-        ├── validation.py       # Input validation
-        └── __pycache__/        # Python cache (ignored)
 🔑 APIs & Configuration
 Create a .env file in the project root with your keys:
 
@@ -127,3 +92,4 @@ Add multi‑company comparison mode.
 
 📜 License
 MIT License — free to use and adapt.
+
