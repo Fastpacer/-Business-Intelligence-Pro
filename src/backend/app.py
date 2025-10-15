@@ -17,10 +17,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS setup (allow frontend)
+# CORS setup (allow frontend + Render deployment)
 origins = [
     "http://localhost:3000",
-    "http://127.0.0.1:3000"
+    "http://127.0.0.1:3000",
+    "https://business-intelligence-pro-3.onrender.com",  # 👈 add your frontend Render URL here
 ]
 
 app.add_middleware(
@@ -32,8 +33,7 @@ app.add_middleware(
 )
 
 # Import routers
-from src.backend.routers import scrape, enrich, ai_insights # 👈 works once __init__.py files exist
-
+from src.backend.routers import scrape, enrich, ai_insights
 
 # Register routers
 app.include_router(scrape.router, prefix="/api/scrape", tags=["Scraper"])
@@ -48,4 +48,10 @@ def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run(
+        "app:app",  
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),  # 👈 use Render's $PORT
+        reload=False
+    )
+
