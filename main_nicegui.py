@@ -7,7 +7,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem
 from reportlab.lib.styles import getSampleStyleSheet
 
-API_BASE = "http://127.0.0.1:8000/api"
+API_BASE = "/api"
 
 def call_api(endpoint, method="get", payload=None, params=None):
     try:
